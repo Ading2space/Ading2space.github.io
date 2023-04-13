@@ -4,11 +4,37 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2023/04/13/3rd_test/"/>
+      <url>/2023/04/13/3rd_test/</url>
+      
+        <content type="html"><![CDATA[<p>这是第三篇测试文章</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Post test</title>
       <link href="/2023/04/13/post-test/"/>
       <url>/2023/04/13/post-test/</url>
       
         <content type="html"><![CDATA[<p>this is a test post</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/04/13/post_test_2nd/"/>
+      <url>/2023/04/13/post_test_2nd/</url>
+      
+        <content type="html"><![CDATA[<p>这是第二篇文章测试</p>]]></content>
       
       
       
