@@ -4,26 +4,19 @@
   
     
     <entry>
-      <title>test a new post from issue</title>
-      <link href="/2023/04/13/test-a-new-post-from-issue/"/>
-      <url>/2023/04/13/test-a-new-post-from-issue/</url>
+      <title>懒是第一生产力 —— 使用GitHub Issue自动部署Github Pages</title>
+      <link href="/2023/04/12/publish-hexo-post-from-github-issue/"/>
+      <url>/2023/04/12/publish-hexo-post-from-github-issue/</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="title-test-a-new-post-from-issuetags-date-2023-04-13-11-16-03"><a href="#title-test-a-new-post-from-issuetags-date-2023-04-13-11-16-03" class="headerlink" title="title: test a new post from issuetags: []date: 2023-04-13 11:16:03"></a>title: test a new post from issue<br>tags: []<br>date: 2023-04-13 11:16:03</h2><p>this is a post from issue</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test a new post</title>
-      <link href="/2023/04/13/test-a-new-post/"/>
-      <url>/2023/04/13/test-a-new-post/</url>
-      
-        <content type="html"><![CDATA[<p>this is a post from issue</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>用最简单的方式维护个人blog，降低写文章的心智负担。</p><hr><h1 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h1><p>在自定仓库内提交issue，标记milestone后，自动生成Hexo的新Post，并自动编译部署到Github Pages</p><hr><h1 id="仓库准备"><a href="#仓库准备" class="headerlink" title="仓库准备"></a>仓库准备</h1><ul><li>私有仓库<code>yourname/foo</code>：存放<a href="https://hexo.io/zh-cn/index.html">Hexo</a>源文件，使用issue提交新Post</li><li>公有仓库<code>yourname.github.io</code>：存放<a href="https://docs.github.com/zh/pages/getting-started-with-github-pages">Github Pages</a></li></ul><hr><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="源文件仓库构建"><a href="#源文件仓库构建" class="headerlink" title="源文件仓库构建"></a>源文件仓库构建</h2><p><code>yourname/foo</code> 按照存放<a href="https://hexo.io/zh-cn/index.html">Hexo</a>文档构建并进行配置，<em><strong>无需进行depoly相关配置</strong></em></p><h2 id="添加submodule"><a href="#添加submodule" class="headerlink" title="添加submodule"></a>添加submodule</h2><p>…<br><em><strong>待续</strong></em></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
       
     </entry>
     
