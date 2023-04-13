@@ -1,12 +1,16 @@
-/* =============================================================================
-   container
-   ========================================================================== */
-
+.navbar-inverse {
+  background-color: #eee;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #000;
+}
+.navbar-inverse .navbar-brand {
+  color: #000;
+}
 .container-narrow {
   margin: 0 auto;
-  max-width:970px;
+  max-width: 970px;
 }
-
 .container-narrow > footer {
   margin-top: 20px;
   text-align: center;
@@ -18,217 +22,160 @@
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-
-/* =============================================================================
-   Body and structure
-   ========================================================================== */
-
 body {
   position: relative;
   padding-top: 40px;
-  background-color: #fff;
-  background-image: url(../img/grid-18px-masked.png);
-  background-repeat: repeat-x;
-  background-position: 0 40px;
   padding-bottom: 70px;
 }
-
 .content {
   padding: 20px;
-  margin-left: -20px; /* negative indent the amount of the padding to maintain the grid system */
-  margin-right: -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 6px 6px 6px 6px;
-  -moz-border-radius: 6px 6px 6px 6px;
-  border-radius: 6px 6px 6px 6px;
-  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.75);
-  -moz-box-shadow: 0 2px 102px rgba(0,0,0,.75);
-  box-shadow: 0 2px 10px rgba(0,0,0,.75);
+  margin: 20px 0;
 }
-
 #sidebar {
   font-size: 0.9em;
 }
-
-a {
-    word-break: break-word;
+.post {
+  font-size: 1em;
 }
-
-/* =============================================================================
-   page, post
-   ========================================================================== */
-
-.post{
-  font-size: 1.2em;
-}
-
-.page{
+.page {
   font-size: 16px;
 }
-
-.page, .post{
+.page,
+.post {
   line-height: 1.5em;
-  font-family: 'Open Sans',"Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+  font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
 }
-
+.page .more {
+  /* text-pull: right; */
+}
 .post .date {
-  margin-bottom:20px;
-  font-weight:bold;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
-
 .mypage {
   padding-bottom: 30px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
 }
-
-/* =============================================================================
-   navbar
-   ========================================================================== */
-
 .navbar-brand {
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-
 .navbar-brand:hover {
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
 }
-
-
-/* =============================================================================
-   pagination
-   ========================================================================== */
 
 .pagination {
   margin: 10px 0;
 }
-
-.pagination a{
-  color:#555;  
+.pagination a {
+  color: #555;
 }
-
-
-/* =============================================================================
-   List
-   ========================================================================== */
-
 li i {
   margin-right: 5px;
-  margin-left: 5px;  
+  margin-left: 5px;
 }
-
 .listing-item {
   line-height: 24px;
 }
-
-/* =============================================================================
-   widget and tag box
-   ========================================================================== */
-
 .meta-widget {
   margin: 10px 0;
 }
-
-.meta-widget a{
-  color:#555;
+.meta-widget a {
+  color: #fefe54;
 }
-
 .tag_box {
-  margin:0;
-  overflow:hidden;
+  margin: 0;
+  overflow: hidden;
 }
 .tag_box li {
-  line-height:28px;
+  line-height: 28px;
 }
 .tag_box li i {
-  opacity:0.9;
+  opacity: 0.9;
 }
 .tag_box.inline li {
-  float:left;
+  float: left;
 }
 .tag_box a {
   padding: 2px 6px;
   margin: 2px;
   background: #e5e5e5;
-  color:#555;
+  color: #555;
   border-radius: 3px;
-  text-decoration:none;
-  border:1px dashed #bbb;
+  text-decoration: none;
+  border: 1px dashed #bbb;
 }
-.tag_box a span{
-  vertical-align:super;
-  font-size:0.8em;
+.tag_box a span {
+  vertical-align: super;
+  font-size: 0.8em;
 }
 .tag_box a:hover {
-  background-color:#397bdd;
-  color:#FFF;
+  background-color: #397bdd;
+  color: #fff;
 }
 .tag_box a.active {
-  background:#57A957;
-  border:1px solid #4C964D;
-  color:#FFF;
+  background: #57a957;
+  border: 1px solid #4c964d;
+  color: #fff;
 }
-
 .widget {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e0e0e0; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
 }
-
+#local-search-input {
+  background-color: #000;
+  color: #fff;
+  text-fill-color: #bbb;
+  -webkit-text-fill-color: #bbb;
+}
 #local-search-result {
-  scroll:auto;
-  overflow:auto;
-  max-height:3in;
+  scroll: auto;
+  overflow: auto;
+  max-height: 3in;
+  background-color: #000;
 }
-
 ul.search-result-list {
   padding-left: 10px;
 }
-
 a.search-result-title {
   font-weight: bold;
 }
-
 p.search-result {
-  color=#555;
+  color: #555;
 }
-
 em.search-keyword {
   border-bottom: 1px dashed #4088b8;
   font-weight: bold;
 }
-
-.tagcloud .entry{
-  width: 100%;  
+.tagcloud .entry {
+  width: 100%;
 }
-
-.archive-title:before {
-  font-family: FontAwesome;
-  content: '\f187  ';
+a {
+  color: #fefe54;
 }
-
-.archive-title-tag:before {
-  font-family: FontAwesome;
-  content: '\f02c  ';
+a:focus {
+  color: #fefe54;
+  background: #a50;
 }
-
-.archive-title-category:before {
-  font-family: FontAwesome;
-  content: '\f07b  ';
+a:hover {
+  color: #fefe54;
+  background: #a50;
 }
-
-/* =============================================================================
-   hyper links
-   ========================================================================== */
-
+a:active {
+  color: #fefe54;
+  background: #a50;
+}
 a.label-anchor {
   position: relative;
   display: block;
   text-align: right;
   width: 200px;
   left: -210px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
 }
 a.label-anchor:target span {
   background-color: #b94a48;
@@ -238,8 +185,8 @@ a.label-anchor:hover {
 }
 a.label-anchor span {
   font-weight: bold;
-  line-height: 0px;
-  color: #ffffff;
+  line-height: 0;
+  color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   background-color: #666;
@@ -248,7 +195,6 @@ a.label-anchor span {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-
 a.inline-ref {
   border-bottom: dotted 1px #333;
   color: black;
@@ -257,333 +203,303 @@ a.inline-ref:hover {
   text-decoration: none;
   border-bottom: solid 1px #000;
 }
-
-/* =============================================================================
-  blockquote
-   ========================================================================== */
-
-blockquote p, blockquote ol, blockquote ul, blockquote li, .slogan{
-  font-family: 'Open Sans',"Helvetica Neue", Helvetica, "Segoe UI", Ubuntu, "Hiragino Sans GB", '楷体', 'STKaiti';
+blockquote {
+  border-left: 5px solid #ccc;
+  font-size: 0.9em;
+  background-color: #008000;
 }
-
-/* =============================================================================
-   img
-   ========================================================================== */
-
-img, video {
+blockquote p,
+blockquote ol,
+blockquote ul,
+blockquote li,
+.slogan {
+  border: 2px solid #bbb;
+  padding: 10px 10px;
+  font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
+  margin-left: -20px;
+}
+img,
+video {
   max-width: 97.5%;
   margin: 15px auto;
   display: block;
   height: auto;
 }
-
-/* =============================================================================
-   slogan
-   ========================================================================== */
-
-.slogan .icon-heart{
+.slogan .icon-heart {
   opacity: 0.5;
   margin-right: 5px;
   margin-top: 3px;
 }
-
-.slogan .icon-heart:hover{
+.slogan .icon-heart:hover {
   opacity: 1;
 }
-
-.slogan{
+.slogan {
   font-size: 1.2em;
-  color: #888;  
-  display:block;
-  margin-bottom: 1em;
+  color: #fff;
+  display: block;
+  margin-bottom: 1.2em;
 }
-
-/* =============================================================================
-   scroll to top
-   ========================================================================== */
-
-#gotop{ 
-  display:block;  
-  width:36px; 
-  height:36px;
-  position:fixed;  
-  bottom:40px;  
-  right:30px; 
-  border-radius:7px;
-  text-decoration:none;  
-  display:none;  
+.blink-fast {
+  animation-duration: 0.5s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
-#gotop span{ 
-  display:block; 
-} 
-#gotop span{ 
-  font-size:24px; 
-  text-align:center; 
+.blink-slow {
+  animation-duration: 1s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
-
-/* =============================================================================
-   Headers
-   ========================================================================== */
-
-header h1{
-  font-weight:normal;
-  line-height:1.2em;
-  margin-bottom:0.6667em;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-h1{
-  font-size:2.6em;
-  line-height:1.2em;
-  margin-bottom:0.6667em;
+#gotop {
+  display: block;
+  width: 90px;
+  height: 36px;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  display: none;
+  background-color: #000;
 }
-
-h1,h2,h3,h4,h5,h6{
-  text-rendering:optimizelegibility;
-  font-weight:bold;
-  font-family: 'Open Sans', "Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
+#gotop span {
+  display: block;
+  color: #fff;
 }
-
-h2{
-  margin: 0.83em 0;
-  color: green;
+#gotop span:hover {
+  color: #aaa;
+}
+#gotop span {
+  font-size: 24px;
+  text-align: center;
+  line-height: 35px;
+  vertical-align: bottom;
+}
+header h1 {
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.6667em;
+}
+h1 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 0.6667em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+  font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
+  color: #fff;
+}
+h2 {
+  color: #fff;
   padding-top: 40px;
-  margin-top: -25px;
+  margin: -25px 0 0.83em;
 }
-
-h3 {
-  color: #9C4C17;
-}
-
-h4 {
-  color: #B94A48;
-}
-
 .page-header {
-  -webkit-background-clip: border-box;
-  -webkit-background-origin: padding-box;
-  -webkit-background-size: cover;
-  /* background-color: #f5f5f5; */
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px 10px 20px;
   margin: -20px -20px 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;  
+  color: #fff;
+  font-size: 1.3em;
+  background-color: #00aaaa;
+  border-bottom: unset;
 }
 
-/* =============================================================================
-   entry
-   ========================================================================== */
-
-.page .entry, .page .entry-show-title{
-  padding-top: 10px 0;
+.page-header p {
+  margin-bottom: unset;
+  color: #000;
 }
-
-.page .entry .row, .page .entry-show-title .row{
+.page .entry {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+.page .entry .row {
   padding-left: 20px;
   padding-right: 5px;
 }
-
-.page .entry h2{
-  display:block; overflow: hidden; width: 0; height: 0;
+.page .entry h2 {
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
   margin: -20px 0;
 }
-
-.page .entry h3{
-  display:block; overflow: hidden; width: 0; height: 0;
+.page .entry h3 {
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
 }
-
-.page .entry .col-md-8, .page .entry-show-title .col-md-8{
+.page .entry .col-md-8 {
   margin: 10px 0;
 }
-
-.page .entry .thumbnail, .page .entry-show-title .thumbnail{
+.page .entry .thumbnail {
   margin: 10px;
 }
-
-.page h3.title, .page h3.title-top {
-  position:relative;
-  padding: 2px 5px 5px 5px;
-  font-size: 1.9em;
-  font-weight: normal;
-  font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
+.page h3.title {
+  position: relative;
+  padding: 5px 5px 5px 5px;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: bold;
+  font-family: DOS-en, DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
 }
-
-.page h3.title a, .page h3.title-top a {
-  color: black;
+.page h3.title div.article-title {
+  width: 80%;
 }
-
-.page h3.title div.article-title, .page h3.title-top div-article-title {
-    width:80%;    
-}
-
-.article-title-text{
-    padding-right: 6px;
-}    
-
-.page h3.title div.date, .page h3.title-top div.date {
-  /* position:absolute; */
-  /* right:5px; */
+.page h3.title div.date {
   float: right;
-  font-size:0.7em;
+  font-size: 0.7em;
   color: #777;
-  padding-top: 6px;
 }
-
-
-/* =============================================================================
-   Archives list
-   ========================================================================== */
-
 .archive-ul > .caret {
   vertical-align: 7px;
   margin-left: 5px;
   opacity: 0.3;
 }
-
 .archive-ul:hover > .caret {
   opacity: 1;
 }
-
-/* =============================================================================
-   ToC
-   ========================================================================== */
-
-.toc{
-  font-size:10pt;
-  width:auto;
-  padding:10px;
-  background: #eee;
-  border:solid 1px #ccc;
+.toc {
+  font-size: 10pt;
+  width: auto;
+  padding: 10px;
+  background: #000;
 }
- 
-.toc .toc-title{
-  font-weight:bold;
-  font-size:125%
+.toc .toc-title {
+  font-size: 125%;
 }
-
-.toc-article{
-  list-style:circle;
+.toc-article {
+  list-style: circle;
   line-height: 1em;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding: 10px 20px;
 }
-
-.toc-article li{
-  margin-left:5px !important;
-  padding:0 !important  
+.toc-article li {
+  margin-left: 5px !important;
+  padding: 0 !important;
 }
-
-.toc-article ol{
-  list-style:square;
+.toc-article ol {
+  list-style: square;
   padding: 5px 20px;
 }
-
-.toc-article ol ol{
-  list-style:circle;
+.toc-article ol ol {
+  list-style: circle;
   padding: 5px 20px;
 }
-
-/* =============================================================================
-   Codes
-   ========================================================================== */
-
-.line{
+.line {
   height: 20px;
 }
-
-pre code{
-  border: none!important;
-}
-
-.comment-widget-content pre {
-  margin-left: 30px;
-}
-
-/* =============================================================================
-   Tables
-   ========================================================================== */
-
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
-
 th {
   padding: 12px 10px 12px 10px;
   border-bottom: 1px dashed #4088b8;
 }
-
 td {
   padding: 7px 10px 7px 10px;
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
-
-/**
- * 
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 .cf:before,
 .cf:after {
-  content: ""; /* 1 */
-  display: table; /* 2 */
+  content: '';
+  display: table;
 }
-
 .cf:after {
   clear: both;
 }
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 .cf {
   *zoom: 1;
 }
+hr {
+  border-top: 2px solid #fff;
+}
+.btn {
+  margin-bottom: 10px;
+}
+.btn:active {
+  -webkit-box-shadow: #000 0 0 0 0;
+  box-shadow: #000 0 0 0 0;
+  margin: 10px 0 0 10px;
+  outline: #000 none;
+  background: #bbb !important;
+}
+.ds-thread {
+  font-size: 0.8em;
+}
+.header-logo {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../logo.jpg') no-repeat center;
+  background-size: contain;
+}
 
-/* RSS button */
-.rsspart {
-  background: #2ca6cb;
-  width: 100%;
+.fa-heart:before {
+  color: #f00;
 }
-@media only screen and (min-width: 768px) {
-  .rsspart {
-    float: left;
-    width: 45%;
-    margin: 0 5% 0 0;
-  }
+pre code {
+  border-width: 0 !important;
 }
-@media only screen and (min-width: 1024px) {
-  .rsspart {
-    width: 100%;
-    float: none;
-    margin: 1em 0 0;
-  }
+pre {
+  border-width: 0 !important;
+  font-size: 16px !important;
 }
-.rsspart a {
+pre,
+.highlight,
+.gist {
+  background: #000 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+figure {
+  border-width: 0 !important;
+}
+.alert-success {
+  color: #fefe54;
+}
+.thumbnail {
+  border: 0;
+}
+.date {
   color: #fff;
-  display: block;
-  padding: 0.625em 0;
-  text-align: center;
-  text-decoration: none;
+  line-height: 3em;
+  text-align: right;
 }
-.rsspart a:hover {
-  color: #2ca6cb;
-  background: #fafafa;
+pre,
+code {
+  font-family: DOS-en, DOS, Monaco, Menlo, Consolas, 'Courier New', monospace !important;
 }
-.rsspart a::before {
-  font-family: "FontAwesome";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 0.5em;
-  content: "\f09e";
+.fancybox-close:hover {
+  background: url('../fancybox/fancybox_sprite.png');
+}
+.fancybox-close:focus {
+  background: url('../fancybox/fancybox_sprite.png');
+}
+.fancybox-close:active {
+  background: url('../fancybox/fancybox_sprite.png');
 }
