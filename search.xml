@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test a new post</title>
+      <link href="/2023/04/13/test-a-new-post/"/>
+      <url>/2023/04/13/test-a-new-post/</url>
+      
+        <content type="html"><![CDATA[<p>this is a post from issue</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Post test</title>
       <link href="/2023/04/13/post-test/"/>
       <url>/2023/04/13/post-test/</url>
