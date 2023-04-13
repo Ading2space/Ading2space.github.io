@@ -66,6 +66,9 @@ body {
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
 }
+.navbar-inverse .navbar-brand:hover {
+  color: unset;
+}
 
 .pagination {
   margin: 10px 0;
@@ -126,14 +129,45 @@ li i {
   padding-bottom: 15px;
   border-bottom: 1px solid #e0e0e0;
 }
+.widget .entry {
+  background-color: transparent;
+}
+.widget .entry li:hover {
+  color: #fefe54;
+  background: #a50;
+}
+.widget .entry li a {
+  display: block;
+  width: 100%;
+  color: #000;
+}
+.widget .entry li a:hover {
+  color: unset;
+  background: unset;
+}
+
+.widget .entry-container {
+  padding: 5px;
+  background-color: #bbb;
+}
+.widget .entry-container .entry-box {
+  border: 2px solid #000;
+}
 #local-search-input {
   background-color: #000;
   color: #fff;
-  text-fill-color: #bbb;
+  /* text-fill-color: #bbb; */
   -webkit-text-fill-color: #bbb;
 }
+.form-group {
+  padding-left: 10px;
+  background: #000;
+}
+.form-control {
+  height: 48px;
+}
 #local-search-result {
-  scroll: auto;
+  /* scroll: auto; */
   overflow: auto;
   max-height: 3in;
   background-color: #000;
@@ -447,6 +481,15 @@ hr {
   outline: #000 none;
   background: #bbb !important;
 }
+
+.btn-default.disabled {
+  color: #eee;
+}
+
+.btn:active {
+  margin: 3px 0 0 10px;
+}
+
 .ds-thread {
   font-size: 0.8em;
 }

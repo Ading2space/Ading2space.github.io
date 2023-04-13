@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>test a new post</title>
-      <link href="/2023/04/13/test-a-new-post/"/>
-      <url>/2023/04/13/test-a-new-post/</url>
+      <title>Post test</title>
+      <link href="/2023/04/13/post-test/"/>
+      <url>/2023/04/13/post-test/</url>
       
-        <content type="html"><![CDATA[<p>this is a post from issue</p>]]></content>
+        <content type="html"><![CDATA[<p>this is a test post</p>]]></content>
       
       
       
@@ -17,11 +17,11 @@
     
     
     <entry>
-      <title>Post test</title>
-      <link href="/2023/04/13/post-test/"/>
-      <url>/2023/04/13/post-test/</url>
+      <title>test a new post</title>
+      <link href="/2023/04/13/test-a-new-post/"/>
+      <url>/2023/04/13/test-a-new-post/</url>
       
-        <content type="html"><![CDATA[<p>this is a test post</p>]]></content>
+        <content type="html"><![CDATA[<p>this is a post from issue</p>]]></content>
       
       
       
