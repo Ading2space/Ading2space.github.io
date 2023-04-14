@@ -474,6 +474,7 @@ table {
     /* border-spacing: 0; */
     vertical-align: middle;
     border: 1px dashed #4088b8;
+    margin-bottom: 20px;
 }
 th {
     padding: 12px 10px 12px 10px;
@@ -558,6 +559,7 @@ figure table {
     border-width: 0 !important;
     border-collapse: separate;
     border-spacing: 0;
+    margin-bottom: unset;
 }
 .alert-success {
     color: #fefe54;
