@@ -120,6 +120,7 @@ https://github.com/ffmpegwasm/ffmpeg.wasm$ npm install @ffmpeg/ffmpeg @ffmpeg/co
 </ul>
 <h2 id="输入Video-File文件，输出帧截图Blob"><a href="#输入Video-File文件，输出帧截图Blob" class="headerlink" title="输入Video File文件，输出帧截图Blob"></a>输入Video File文件，输出帧截图Blob</h2><span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createFFmpeg, fetchFile &#125; from &#x27;@ffmpeg/ffmpeg&#x27;;</span><br><span class="line">...</span><br><span class="line">export const extractVideoFrame = async (file: File) =&gt; &#123;</span><br><span class="line">  const ffmpeg = createFFmpeg(&#123; log: true &#125;);</span><br><span class="line">  await ffmpeg.load();</span><br><span class="line">  ffmpeg.FS(&#x27;writeFile&#x27;, file.name, await fetchFile(file));</span><br><span class="line">  await ffmpeg.run(&#x27;-i&#x27;, file.name, &#x27;-vframes&#x27;, &#x27;1&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  const u8arr = ffmpeg.FS(&#x27;readFile&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  return new Blob([u8arr]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="vite开发服务设置response-header以支持wasm"><a href="#vite开发服务设置response-header以支持wasm" class="headerlink" title="vite开发服务设置response header以支持wasm"></a>vite开发服务设置response header以支持wasm</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">vite.config.js</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">        name: &#x27;configure-response-headers&#x27;,</span><br><span class="line">        configureServer: server =&gt; &#123;</span><br><span class="line">          server.middlewares.use((_req, res, next) =&gt; &#123;</span><br><span class="line">            res.setHeader(&#x27;Cross-Origin-Embedder-Policy&#x27;, &#x27;require-corp&#x27;);</span><br><span class="line">            res.setHeader(&#x27;Cross-Origin-Opener-Policy&#x27;, &#x27;same-origin&#x27;);</span><br><span class="line">            next();</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line"> &#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>PC端浏览器实测可执行结果(不过Memory占用飙升到400MB)，IOS端会提示out of memory错误<br><a target="_blank" rel="noopener" href="https://github.com/GoogleForCreators/web-stories-wp/issues/8768">https://github.com/GoogleForCreators/web-stories-wp/issues/8768</a><br>性能原因，目前不建议在移动端使用</p>
 </blockquote>
@@ -132,13 +133,12 @@ https://github.com/ffmpegwasm/ffmpeg.wasm$ npm install @ffmpeg/ffmpeg @ffmpeg/co
 
     
     
-    <a href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图-2/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一页</a>
     
 
     <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-    <a href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图/" type="button" class="btn btn-default ">下一页<i
+    <a href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图-1/" type="button" class="btn btn-default ">下一页<i
                 class="fa fa-arrow-circle-o-right"></i></a>
     
 
