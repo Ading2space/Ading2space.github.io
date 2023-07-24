@@ -226,6 +226,43 @@
 </div>
 
 		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图/" >
+        
+        浏览器环境使用ffmpegwasm为视频文件生成首帧截图
+      </a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2023-07-24  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="项目引入ffmpegwasm依赖"><a href="#项目引入ffmpegwasm依赖" class="headerlink" title="项目引入ffmpegwasm依赖"></a>项目引入ffmpegwasm依赖</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ffmpegwasm/ffmpeg.wasm">https://github.com/ffmpegwasm/ffmpeg.wasm</a><br><code>$ npm install @ffmpeg/ffmpeg @ffmpeg/core</code></li>
+</ul>
+<h2 id="输入Video-File文件，输出帧截图Blob"><a href="#输入Video-File文件，输出帧截图Blob" class="headerlink" title="输入Video File文件，输出帧截图Blob"></a>输入Video File文件，输出帧截图Blob</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createFFmpeg, fetchFile &#125; from &#x27;@ffmpeg/ffmpeg&#x27;;</span><br><span class="line">...</span><br><span class="line">export const extractVideoFrame = async (file: File) =&gt; &#123;</span><br><span class="line">  const ffmpeg = createFFmpeg(&#123; log: true &#125;);</span><br><span class="line">  await ffmpeg.load();</span><br><span class="line">  ffmpeg.FS(&#x27;writeFile&#x27;, file.name, await fetchFile(file));</span><br><span class="line">  await ffmpeg.run(&#x27;-i&#x27;, file.name, &#x27;-vframes&#x27;, &#x27;1&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  const u8arr = ffmpeg.FS(&#x27;readFile&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  return new Blob([u8arr]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>PC端浏览器实测可执行结果(不过Memory占用飙升到400MB)，IOS端会提示out of memory错误<br><a target="_blank" rel="noopener" href="https://github.com/GoogleForCreators/web-stories-wp/issues/8768">https://github.com/GoogleForCreators/web-stories-wp/issues/8768</a><br>性能原因，目前不建议在移动端使用</p>
+</blockquote>
+
+	
+	</div>
+  <a type="button" href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
 
 		</div>
 
@@ -279,6 +316,11 @@
   <div class="entry-container">
     <div class="entry-box">
       <ul class="entry list-unstyled">
+        
+        <li>
+          <a href="/2023/07/24/浏览器环境使用ffmpegwasm为视频文件生成首帧截图/" ><i class="fa fa-file-o"></i>浏览器环境使用ffmpegwasm为视频文件生成首帧截图</a
+          >
+        </li>
         
         <li>
           <a href="/2023/04/12/publish-hexo-post-from-github-issue/" ><i class="fa fa-file-o"></i>懒是第一生产力 —— 使用GitHub Issue自动...</a

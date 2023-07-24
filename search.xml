@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>浏览器环境使用ffmpegwasm为视频文件生成首帧截图</title>
+      <link href="/2023/07/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8ffmpegwasm%E4%B8%BA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E9%A6%96%E5%B8%A7%E6%88%AA%E5%9B%BE/"/>
+      <url>/2023/07/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8ffmpegwasm%E4%B8%BA%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E9%A6%96%E5%B8%A7%E6%88%AA%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="项目引入ffmpegwasm依赖"><a href="#项目引入ffmpegwasm依赖" class="headerlink" title="项目引入ffmpegwasm依赖"></a>项目引入ffmpegwasm依赖</h2><ul><li><a href="https://github.com/ffmpegwasm/ffmpeg.wasm">https://github.com/ffmpegwasm/ffmpeg.wasm</a><br><code>$ npm install @ffmpeg/ffmpeg @ffmpeg/core</code></li></ul><h2 id="输入Video-File文件，输出帧截图Blob"><a href="#输入Video-File文件，输出帧截图Blob" class="headerlink" title="输入Video File文件，输出帧截图Blob"></a>输入Video File文件，输出帧截图Blob</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createFFmpeg, fetchFile &#125; from &#x27;@ffmpeg/ffmpeg&#x27;;</span><br><span class="line">...</span><br><span class="line">export const extractVideoFrame = async (file: File) =&gt; &#123;</span><br><span class="line">  const ffmpeg = createFFmpeg(&#123; log: true &#125;);</span><br><span class="line">  await ffmpeg.load();</span><br><span class="line">  ffmpeg.FS(&#x27;writeFile&#x27;, file.name, await fetchFile(file));</span><br><span class="line">  await ffmpeg.run(&#x27;-i&#x27;, file.name, &#x27;-vframes&#x27;, &#x27;1&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  const u8arr = ffmpeg.FS(&#x27;readFile&#x27;, `$&#123;file.name&#125;.png`);</span><br><span class="line">  return new Blob([u8arr]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><blockquote><p>PC端浏览器实测可执行结果(不过Memory占用飙升到400MB)，IOS端会提示out of memory错误<br><a href="https://github.com/GoogleForCreators/web-stories-wp/issues/8768">https://github.com/GoogleForCreators/web-stories-wp/issues/8768</a><br>性能原因，目前不建议在移动端使用</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>懒是第一生产力 —— 使用GitHub Issue自动部署Github Pages</title>
       <link href="/2023/04/12/publish-hexo-post-from-github-issue/"/>
       <url>/2023/04/12/publish-hexo-post-from-github-issue/</url>
